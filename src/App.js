@@ -25,7 +25,7 @@ function App() {
         </div>
       </div>
       <h3 className='mt-3'>Expense</h3>
-      <div className='col mt-1'>
+      <div className='col mt-3'>
         <div className='row-sm'>
           <Expens></Expens>
         </div>

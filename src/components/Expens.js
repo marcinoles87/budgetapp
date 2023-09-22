@@ -10,9 +10,10 @@ function Expens() {
         
     ]
   return (
-    <div>
+    <div className='list-group'>
         {expense.map( (item) => {
             return(
+
                 <ExpensItem id={item.id} name={item.name} cost={item.cost}></ExpensItem>
             )
         })}

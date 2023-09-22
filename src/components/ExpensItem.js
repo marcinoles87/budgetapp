@@ -1,14 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { TiDelete} from 'react-icons/ti'
 
 function ExpensItem({id , name , cost}) {
   return (
-    <tr key={id}>
-    <th scope='row' >
-        <td>{name}</td>
-        <td>{cost}</td>
-
-        </th>
-        </tr>
+    <li className='list-group-item' key={id}>
+      {name} 
+      <span className='badge'> E {cost}</span>
+      
+    </li>
   )
 }
 

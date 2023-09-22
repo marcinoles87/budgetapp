@@ -2,7 +2,9 @@ import React from 'react'
 
 function Budget() {
   return (
-    <div>Budget</div>
+    <div className='alert alert-secondary'>
+      <span>Budget</span>
+    </div>
   )
 }
 

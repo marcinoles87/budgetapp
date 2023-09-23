@@ -14,7 +14,7 @@ function Expens() {
         {expense.map( (item) => {
             return(
 
-                <ExpensItem id={item.id} name={item.name} cost={item.cost}></ExpensItem>
+                <ExpensItem id={item.id} name={item.name} cost={item.cost} key={item.id}></ExpensItem>
             )
         })}
     </div>

@@ -5,6 +5,7 @@ import Budget from './components/Budget';
 import Remaining from './components/Remaining';
 import Spent from './components/Spent';
 import Expens from './components/Expens';
+import BuyItem from './components/BuyItem';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <div className='row-sm'>
           <Expens></Expens>
         </div>
+      </div>
+
+      <div className='row mt-3'>
+        <BuyItem></BuyItem>
       </div>
     </div>
   );

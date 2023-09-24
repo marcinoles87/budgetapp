@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ExpensItem from './ExpensItem'
 
 function Expens() {
@@ -9,6 +9,10 @@ function Expens() {
           {id: 1238 , name : 'my own' , cost : 77 },
         
     ]
+
+    const allCost = expense[0].cost + expense[1].cost ;
+    console.log(allCost)
+    
   return (
     <div className='list-group'>
         {expense.map( (item) => {
@@ -18,6 +22,8 @@ function Expens() {
             )
         })}
     </div>
+
+
   )
 }
 

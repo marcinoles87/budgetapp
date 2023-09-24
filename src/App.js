@@ -10,7 +10,10 @@ import { useState } from 'react';
 
 function App() {
 
-  const [budget , setBudget] = useState(1000)
+  const [budget , setBudget] = useState(1000);
+  
+
+ 
 
   return (
     <div className="App">
@@ -26,7 +29,7 @@ function App() {
         </div>
 
         <div className='row-sm'>
-          <Spent></Spent>
+          <Spent ></Spent>
         </div>
       </div>
       <h3 className='mt-3'>Expense</h3>

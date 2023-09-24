@@ -11,7 +11,13 @@ function Expens() {
     ]
 
     const allCost = expense[0].cost + expense[1].cost ;
-    console.log(allCost)
+  
+    const costAll = expense.map( (item) => {
+      return(item.cost++)
+      
+    })
+
+    console.log(costAll)
     
   return (
     <div className='list-group'>

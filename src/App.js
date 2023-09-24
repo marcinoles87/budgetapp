@@ -6,14 +6,18 @@ import Remaining from './components/Remaining';
 import Spent from './components/Spent';
 import Expens from './components/Expens';
 import BuyItem from './components/BuyItem';
+import { useState } from 'react';
 
 function App() {
+
+  const [budget , setBudget] = useState(1000)
+
   return (
     <div className="App">
       <h1 className='mt-3'>Budget Planner</h1>
       <div className='col mt-3'>
         <div className='row-sm'>
-          <Budget></Budget>
+          <Budget budget={budget}></Budget>
 
         </div>
         

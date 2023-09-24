@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Budget() {
+function Budget({budget}) {
+  
   return (
     <div className='alert alert-secondary'>
-      <span>Budget</span>
+      <span>Budget : {budget}</span>
     </div>
   )
 }

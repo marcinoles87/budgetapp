@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Spent() {
+function Spent({spentCost}) {
   
   return (
     <div className='alert alert-info'>
-        <span>Spent</span>
+        <span>Spent : {spentCost}</span>
         </div>
   )
 }

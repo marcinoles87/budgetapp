@@ -6,14 +6,17 @@ import Remaining from './components/Remaining';
 import Spent from './components/Spent';
 import Expens from './components/Expens';
 import BuyItem from './components/BuyItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
   const [budget , setBudget] = useState(1000);
+  const [spentCost , setSpent] = useState(0);
+  const [remaining , setRemaining] = useState(0);
   
-
- 
+  useEffect( () => {
+    setRemaining(budget - spentCost)
+  },[spentCost])
 
   return (
     <div className="App">
@@ -25,17 +28,17 @@ function App() {
         </div>
         
         <div className='row-sm'>
-          <Remaining></Remaining>
+          <Remaining remaining={remaining}></Remaining>
         </div>
 
         <div className='row-sm'>
-          <Spent ></Spent>
+          <Spent spentCost={spentCost} ></Spent>
         </div>
       </div>
       <h3 className='mt-3'>Expense</h3>
       <div className='col mt-3'>
         <div className='row-sm'>
-          <Expens></Expens>
+          <Expens setSpent={setSpent}></Expens>
         </div>
       </div>
 

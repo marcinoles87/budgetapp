@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Remaining() {
+function Remaining({remaining}) {
   return (
     <div className='alert alert-success'>
-        <span>Remaining</span>
+        <span>Remaining : {remaining}</span>
     </div>
   )
 }

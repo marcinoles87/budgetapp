@@ -13,9 +13,15 @@ function Expens() {
     const allCost = expense[0].cost + expense[1].cost ;
   
     const costAll = expense.map( (item) => {
-      return(item.cost++)
+      let sum = 0
+      return item.cost = sum +=item.cost
+      
       
     })
+
+    let summ = 0;
+
+     costAll.map( e => summ +=e)
 
     console.log(costAll)
     

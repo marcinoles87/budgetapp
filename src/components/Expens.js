@@ -13,7 +13,6 @@ function Expens({setSpent}) {
         
     ]
 
-    const allCost = expense[0].cost + expense[1].cost ;
   
     const costAll = expense.map( (item) => {
 

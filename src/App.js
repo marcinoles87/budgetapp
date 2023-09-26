@@ -13,14 +13,21 @@ function App() {
   const [budget , setBudget] = useState(1000);
   const [spentCost , setSpent] = useState(0);
   const [remaining , setRemaining] = useState(0);
+  const [itemBuy , setItembuy] = useState()
   
   useEffect( () => {
     setRemaining(budget - spentCost)
   },[spentCost])
 
+  const  costItemBuy = (childData) => {
+    setItembuy(childData)
+  
+  }
+
   return (
     <div className="App">
       <h1 className='mt-3'>Budget Planner</h1>
+      <p>{itemBuy}</p>
       <div className='col mt-3'>
         <div className='row-sm'>
           <Budget budget={budget}></Budget>
@@ -43,7 +50,7 @@ function App() {
       </div>
 
       <div className='row mt-3'>
-        <BuyItem></BuyItem>
+        <BuyItem costItemBuy={costItemBuy}></BuyItem>
       </div>
     </div>
   );

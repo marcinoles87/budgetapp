@@ -35,7 +35,7 @@ function BuyItem() {
       </div>
 
       <div className='col-sm'>
-        <button className='btn bg-primary'>Add Cost</button>
+        <button type='submit' className='btn btn-primary'>Add Cost</button>
       </div>
 
     

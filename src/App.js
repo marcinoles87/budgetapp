@@ -49,7 +49,7 @@ function App() {
         </div>
       </div>
 
-      <div className='row mt-3'>
+      <div className='col mt-3'>
         <BuyItem costItemBuy={costItemBuy}></BuyItem>
       </div>
     </div>

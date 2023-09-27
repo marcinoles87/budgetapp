@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
+import { AppContex } from './Appcontex';
 
 function BuyItem() {
+  
+  const {dispatch} = useContext(AppContex);
   const [name , setName] = useState('');
   const [cost , setCost] = useState('');
   

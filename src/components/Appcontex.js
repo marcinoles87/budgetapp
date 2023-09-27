@@ -10,7 +10,7 @@ const AppReducer = (state , action) => {
 
 const initialState = {
     budget : 2000 ,
-    expense : [
+    expenses : [
         { id : 12 , name : 'shooping ' , cost : 40},
         { id : 12 , name : 'holiday ' , cost : 40},
         { id : 12 , name : 'shooping ' , cost : 40},
@@ -24,7 +24,7 @@ export const AppProvider = (props) => {
     return( <AppContex.Provider
     value={{
         budget : state.budget ,
-        expense : state.expense,
+        expenses : state.expenses,
         dispatch
     }}> {props.children}
         

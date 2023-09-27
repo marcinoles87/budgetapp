@@ -1,6 +1,9 @@
-import React from 'react'
+import React , {useContext} from 'react';
+import { AppContex } from './Appcontex';
 
-function Budget({budget}) {
+function Budget() {
+
+  const {budget} = useContext(AppContex)
   
   return (
     <div className='alert alert-secondary'>

@@ -5,9 +5,12 @@ function BuyItem() {
   const [cost , setCost] = useState('');
   
  
-  
+  const onSubmit = (event) =>{
+    event.preventDefault();
+    alert(' name : ' + name + ' cost :' + cost)
+  }
   return (
-      <>
+      <form onSubmit={onSubmit}>
       
       <div className="row">
       
@@ -40,16 +43,11 @@ function BuyItem() {
       </div>
 
       <div className='col-sm'>
-        <button type='submit' className='btn btn-primary'>Add Cost</button>
+        <button  type='submit' className='btn btn-primary'>Add Cost</button>
       </div>
 
-    
 
-
-
-    
-
-    </>
+    </form>
     
   )
 }

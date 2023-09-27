@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 function BuyItem() {
-  const [item , setItem] = useState(['www'])
+  const [name , setName] = useState('');
+  const [cost , setCost] = useState('');
   
  
   
@@ -16,7 +17,9 @@ function BuyItem() {
         type="text" 
         className="form-control" 
         required='required'
-        id='name'>
+        id='name'
+        value={name}
+        onChange={(event) => setName(event.target.value)}>
         </input>
       </div>
       </div>
@@ -29,7 +32,9 @@ function BuyItem() {
           type="text" 
           className="form-control" 
           required='required'
-          id='cost'>
+          id='cost'
+          value={cost}
+          onChange={(event) => setCost(event.target.value)}>
         </input>
       </div>
       </div>

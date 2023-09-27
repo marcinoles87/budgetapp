@@ -7,6 +7,7 @@ import Spent from './components/Spent';
 import Expens from './components/Expens';
 import BuyItem from './components/BuyItem';
 import { useEffect, useState } from 'react';
+import {AppProvider} from './components/Appcontex'
 
 function App() {
 
@@ -25,7 +26,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+
+    <AppProvider>
+      <div className="App">
       <h1 className='mt-3'>Budget Planner</h1>
       <p>{itemBuy}</p>
       <div className='col mt-3'>
@@ -50,9 +53,12 @@ function App() {
       </div>
 
       <div className='col mt-3'>
+        <h2 className='mt-3'>Add Expense</h2>
         <BuyItem costItemBuy={costItemBuy}></BuyItem>
       </div>
     </div>
+    </AppProvider>
+    
   );
 }
 

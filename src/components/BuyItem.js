@@ -7,7 +7,7 @@ function BuyItem() {
   
   return (
       <>
-      <h3>Add Cost</h3>
+      
       <div className="row">
       
       <div className='col-sm'>

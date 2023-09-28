@@ -3,8 +3,9 @@ import { TiDelete} from 'react-icons/ti'
 
 function ExpensItem({name , cost , expenses}) {
 
-  const handleDeleteclick = () => {
-    console.log(expenses)
+  const handleDeleteclick = (expenses) => {
+   console.log(expenses)
+    
   }
 
   return (

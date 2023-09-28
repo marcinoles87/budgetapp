@@ -1,11 +1,16 @@
 import React from 'react';
 import { TiDelete} from 'react-icons/ti'
 
-function ExpensItem({id , name , cost}) {
+function ExpensItem({name , cost , expenses}) {
+
+  const handleDeleteclick = () => {
+    console.log(expenses)
+  }
+
   return (
     <li className='list-group-item'>
         {name} <span className='badge  bg-primary'> {cost} pln</span>
-      <TiDelete></TiDelete>
+      <TiDelete onClick={handleDeleteclick}></TiDelete>
       </li>
   )
 }

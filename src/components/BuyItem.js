@@ -24,6 +24,9 @@ function BuyItem() {
     }
     )
 
+    setName('');
+    setCost('');
+
     console.log(expense)
   }
   return (

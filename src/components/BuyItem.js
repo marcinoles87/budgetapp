@@ -15,8 +15,16 @@ function BuyItem() {
     const expense = {
       id : uuidv4() , 
       name : name ,
-      cost : cost ,
+      cost : parseInt(cost) ,
     }
+
+    dispatch({
+      type : 'ADD_EXPENSE',
+      payload : expense
+    }
+    )
+
+    console.log(expense)
   }
   return (
       <form onSubmit={onSubmit}>
@@ -24,7 +32,7 @@ function BuyItem() {
       <div className="row">
       
       <div className='col-sm'>
-        <label for='name'>Name</label>
+        <label htmlFor='name'>Name</label>
         <input  
         type="text" 
         className="form-control" 
@@ -39,7 +47,7 @@ function BuyItem() {
       <div className="row">
       
       <div className='col-sm'>
-        <label for='cost'>Cost</label>
+        <label htmlFor='cost'>Cost</label>
         <input  
           type="text" 
           className="form-control" 

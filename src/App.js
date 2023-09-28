@@ -13,13 +13,9 @@ function App() {
 
   const [budget , setBudget] = useState(1000);
   const [spentCost , setSpent] = useState(0);
-  const [remaining , setRemaining] = useState(0);
   const [itemBuy , setItembuy] = useState()
   
-  useEffect( () => {
-    setRemaining(budget - spentCost)
-  },[spentCost])
-
+ 
   const  costItemBuy = (childData) => {
     setItembuy(childData)
   
@@ -38,7 +34,7 @@ function App() {
         </div>
         
         <div className='row-sm'>
-          <Remaining remaining={remaining}></Remaining>
+          <Remaining></Remaining>
         </div>
 
         <div className='row-sm'>

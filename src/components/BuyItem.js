@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContex } from './Appcontex';
+import { v4 as uuidv4} from 'uuid'
 
 function BuyItem() {
   
@@ -10,7 +11,12 @@ function BuyItem() {
  
   const onSubmit = (event) =>{
     event.preventDefault();
-    alert(' name : ' + name + ' cost :' + cost)
+    
+    const expense = {
+      id : uuidv4() , 
+      name : name ,
+      cost : cost ,
+    }
   }
   return (
       <form onSubmit={onSubmit}>

@@ -11,7 +11,8 @@ function ExpensItem({name , cost }) {
   const handleDeleteclick = () => {
    
     expenses.map( (item , index) => {
-      console.log(item , index)
+      const remowe  = expenses.splice(item[index] , index )
+      console.log(remowe)
     })
    
   }

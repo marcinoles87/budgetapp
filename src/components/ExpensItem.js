@@ -1,11 +1,19 @@
 import React from 'react';
-import { TiDelete} from 'react-icons/ti'
+import { TiDelete} from 'react-icons/ti';
+import { useContext } from 'react';
+import { AppContex } from './Appcontex';
 
-function ExpensItem({name , cost , expenses}) {
+function ExpensItem({name , cost }) {
 
-  const handleDeleteclick = (expenses) => {
-   console.log(expenses)
-    
+  const {expenses} = useContext(AppContex)
+
+
+  const handleDeleteclick = () => {
+   
+    expenses.map( (item , index) => {
+      console.log(item , index)
+    })
+   
   }
 
   return (

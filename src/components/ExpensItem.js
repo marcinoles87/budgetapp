@@ -3,7 +3,7 @@ import { TiDelete} from 'react-icons/ti';
 import { useContext } from 'react';
 import { AppContex } from './Appcontex';
 
-function ExpensItem({name , cost },props) {
+function ExpensItem({name , cost ,id}) {
 
   const {dispatch} = useContext(AppContex)
 
@@ -12,7 +12,7 @@ function ExpensItem({name , cost },props) {
    
     dispatch({
       type : 'DELETE_EXPENSE' ,
-      payload : props.id
+      payload : id
     })
    
   }

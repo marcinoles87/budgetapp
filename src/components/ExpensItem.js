@@ -3,16 +3,16 @@ import { TiDelete} from 'react-icons/ti';
 import { useContext } from 'react';
 import { AppContex } from './Appcontex';
 
-function ExpensItem({name , cost }) {
+function ExpensItem({name , cost },props) {
 
-  const {expenses} = useContext(AppContex)
+  const {dispatch} = useContext(AppContex)
 
 
   const handleDeleteclick = () => {
    
-    expenses.map( (item , index) => {
-      const remowe  = expenses.splice(item[index] , index )
-      console.log(remowe)
+    dispatch({
+      type : 'DELETE_EXPENSE' ,
+      payload : props.id
     })
    
   }

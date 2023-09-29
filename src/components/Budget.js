@@ -8,6 +8,7 @@ function Budget() {
   return (
     <div className='alert alert-secondary'>
       <span>Budget : {budget}</span>
+      <button className='btn btn-primary'>Edit</button>
     </div>
   )
 }

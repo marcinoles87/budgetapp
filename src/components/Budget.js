@@ -13,9 +13,7 @@ function Budget() {
   const handleOnClick = (e) =>{
    e.preventDefault()
    setShow(!show)
-  
    
-
     dispatch({
       type : 'CHANGE_BUDGET',
       payload : changeBudget
@@ -26,7 +24,7 @@ function Budget() {
   return (
     <div className='alert alert-secondary'>
       <span>Budget : {budget} </span>
-      {show ? <input placeholder='add your budget' onChange={( event) => setChangeBudget(event.target.value)} value={changeBudget}></input> : ''}
+      {show ? <input placeholder='add your budget' onChange={( event) => setChangeBudget(event.target.value)} ></input> : ''}
       
       <button className='btn btn-primary' onClick={handleOnClick} >Edit</button>
     </div>

@@ -27,17 +27,17 @@ function App() {
       <div className="App">
       <h1 className='mt-3'>Budget Planner</h1>
       <p>{itemBuy}</p>
-      <div className='col mt-3'>
-        <div className='row-sm'>
+      <div className='row mt-3'>
+        <div className='col-sm'>
           <Budget budget={budget}></Budget>
 
         </div>
         
-        <div className='row-sm'>
+        <div className='col-sm'>
           <Remaining></Remaining>
         </div>
 
-        <div className='row-sm'>
+        <div className='col-sm'>
           <Spent spentCost={spentCost} ></Spent>
         </div>
       </div>

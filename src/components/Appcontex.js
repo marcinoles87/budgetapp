@@ -20,7 +20,7 @@ const AppReducer = (state , action) => {
         case 'CHANGE_BUDGET' :
             return {
                 ...state , 
-                budget : 3000
+                budget : action.payload
             }
 
         default:
@@ -31,9 +31,7 @@ const AppReducer = (state , action) => {
 const initialState = {
     budget : 2000 ,
     expenses : [
-        { id : 1 , name : 'shooping ' , cost : 40},
-        { id : 12 , name : 'holiday ' , cost : 40},
-        { id : 123 , name : 'shooping ' , cost : 40},
+        
     ]
 }
 

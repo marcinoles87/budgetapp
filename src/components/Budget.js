@@ -3,12 +3,21 @@ import { AppContex } from './Appcontex';
 
 function Budget() {
 
-  const {budget} = useContext(AppContex)
+  const {budget , dispatch} = useContext(AppContex)
+
+  const handleOnClick = () =>{
+    
+    dispatch({
+      type : 'CHANGE_BUDGET',
+      payload : budget
+    }
+    )
+  }
   
   return (
     <div className='alert alert-secondary'>
-      <span>Budget : {budget}</span>
-      <button className='btn btn-primary'>Edit</button>
+      <span>Budget : {budget} </span>
+      <button className='btn btn-primary' onClick={handleOnClick} >Edit</button>
     </div>
   )
 }
